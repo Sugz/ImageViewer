@@ -1,2 +1,2 @@
-# ImageViewer
+# PieViewer
 A Windows screenshot utility
