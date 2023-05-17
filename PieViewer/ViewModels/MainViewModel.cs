@@ -1,6 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using ImageViewer.Services;
 using Microsoft.Extensions.Configuration;
+using PieViewer.Services;
+using PieViewer.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -37,7 +39,10 @@ internal sealed partial class MainViewModel : ObservableObject, ISerializable
     [ObservableProperty]
     private double windowTop;
 
-    
+
+    [ObservableProperty]
+    private ImageViewModel? _currentImage;
+
 
 
     public string GetSerializedName() => "MainViewModel";
@@ -51,8 +56,17 @@ internal sealed partial class MainViewModel : ObservableObject, ISerializable
         WindowTop = jsonObject[nameof(WindowTop)]!.GetValue<double>();
     }
 
-    public MainViewModel(SettingsManager settingsManager)
+    public MainViewModel(SettingsManager settingsManager, PrintScreenListener printScreenListener)
     {
         settingsManager.Deserialize(this);
+
+        printScreenListener.Install();
+        printScreenListener.PrintScreen += (async () => await Task.Run(OnGlobalPrintScreen));
+    }
+
+
+    private void OnGlobalPrintScreen()
+    {
+        Debug.WriteLine("PrintScreen");
     }
 }

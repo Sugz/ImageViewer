@@ -5,11 +5,11 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Resources\PieViewerIcon.ico" />
-    <None Remove="Views\PieViewerIcon.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,7 +20,10 @@
 
   <ItemGroup>
     <Resource Include="Resources\PieViewerIcon.ico" />
-    <Resource Include="Views\PieViewerIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Core\" />
   </ItemGroup>
 
 </Project>

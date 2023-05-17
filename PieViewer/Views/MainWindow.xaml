@@ -9,9 +9,11 @@
         Width="{Binding WindowWidth, Mode=TwoWay}"
         Height="{Binding WindowHeight, Mode=TwoWay}"
         d:DataContext="{d:DesignInstance Type=viewmodels:MainViewModel}"
-        Icon="/Views/PieViewerIcon.ico"
+        Icon="/Resources/PieViewerIcon.ico"
         Left="{Binding WindowLeft, Mode=OneWayToSource}"
         Top="{Binding WindowTop, Mode=OneWayToSource}"
         mc:Ignorable="d">
-    <Grid />
+    <Grid>
+        <Image Source="{Binding CurrentImage.Source}" />
+    </Grid>
 </Window>

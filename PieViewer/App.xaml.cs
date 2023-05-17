@@ -3,6 +3,7 @@ using ImageViewer.Services;
 using ImageViewer.ViewModels;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PieViewer.Services;
 using System;
 using System.Configuration;
 using System.Windows;
@@ -29,12 +30,17 @@ public sealed partial class App : Application
         Ioc.Default.ConfigureServices(
                     new ServiceCollection()
                     .AddSingleton<SettingsManager>()
+                    .AddSingleton<PrintScreenListener>()
                     .AddSingleton<MainViewModel>()
                     .BuildServiceProvider());
     }
 
     protected override void OnExit(ExitEventArgs e)
     {
+        PrintScreenListener? printScreenListener = Ioc.Default.GetService<PrintScreenListener>();
+        printScreenListener?.Dispose();
+
+
         MainViewModel? mainViewModel = Ioc.Default.GetService<MainViewModel>();
         SettingsManager? settingsManager = Ioc.Default.GetService<SettingsManager>();
 
