@@ -4,6 +4,8 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Themes/Controls/SliderNumericTextBox.xaml" />
         <ResourceDictionary Source="/Themes/Controls/HSVColorPicker.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/HSLColorPicker.xaml" />
+        <ResourceDictionary Source="/Themes/Controls/ColorSlider.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>

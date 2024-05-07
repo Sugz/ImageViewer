@@ -3,7 +3,7 @@ using System.IO;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 
-namespace ImageViewer.Services;
+namespace PieViewer.Services;
 
 internal sealed class SettingsManager
 {

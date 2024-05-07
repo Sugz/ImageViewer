@@ -5,25 +5,39 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\CheckerPattern.png" />
+    <None Remove="Resources\color_selector_triangle_border.png" />
+    <None Remove="Resources\file.png" />
+    <None Remove="Resources\folder.png" />
+    <None Remove="Resources\hue_wheel.png" />
+    <None Remove="Resources\Lock.png" />
+    <None Remove="Resources\mask.png" />
     <None Remove="Resources\PieViewerIcon.ico" />
+    <None Remove="Resources\trash.png" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="WriteableBitmapEx" Version="1.6.8" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\CheckerPattern.png" />
+    <Resource Include="Resources\color_selector_triangle_border.png" />
+    <Resource Include="Resources\file.png" />
+    <Resource Include="Resources\folder.png" />
+    <Resource Include="Resources\hue_wheel.png" />
+    <Resource Include="Resources\lock.png" />
+    <Resource Include="Resources\mask.png" />
     <Resource Include="Resources\PieViewerIcon.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Core\" />
+    <Resource Include="Resources\trash.png" />
   </ItemGroup>
 
 </Project>

@@ -1,8 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.DependencyInjection;
-using ImageViewer.ViewModels;
+using PieViewer.ViewModels;
 using System.Windows;
 
-namespace ImageViewer.Views;
+namespace PieViewer.Views;
 
 /// <summary>
 /// Interaction logic for MainWindow.xaml

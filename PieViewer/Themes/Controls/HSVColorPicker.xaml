@@ -9,28 +9,69 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type controls:HSVColorPicker}">
                     <Grid Background="{DynamicResource ToolbarBackground}">
-                        <Canvas Width="{Binding Size, RelativeSource={RelativeSource TemplatedParent}}"
-                                Height="{Binding Size, RelativeSource={RelativeSource TemplatedParent}}"
-                                Margin="10"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center">
-                            <Image Width="{Binding Size, RelativeSource={RelativeSource TemplatedParent}}"
-                                   Height="{Binding Size, RelativeSource={RelativeSource TemplatedParent}}"
-                                   RenderOptions.BitmapScalingMode="Fant"
-                                   Source="/Resources/hue_wheel.png" />
-                            <Image x:Name="PART_Image"
-                                   Width="{Binding Size, RelativeSource={RelativeSource TemplatedParent}}"
-                                   Height="{Binding Size, RelativeSource={RelativeSource TemplatedParent}}"
-                                   RenderOptions.BitmapScalingMode="Fant" />
-                            <Ellipse x:Name="PART_HueSelector"
-                                     Canvas.Left="0"
-                                     Canvas.Top="0"
-                                     Width="12"
-                                     Height="12"
-                                     Stroke="White"
-                                     StrokeThickness="2" />
+                        <StackPanel VerticalAlignment="Center">
+                            <Canvas Width="{Binding Size, RelativeSource={RelativeSource TemplatedParent}}"
+                                    Height="{Binding Size, RelativeSource={RelativeSource TemplatedParent}}"
+                                    Margin="10"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                                <Image Width="{Binding Size, RelativeSource={RelativeSource TemplatedParent}}"
+                                       Height="{Binding Size, RelativeSource={RelativeSource TemplatedParent}}"
+                                       RenderOptions.BitmapScalingMode="Fant"
+                                       Source="/Resources/hue_wheel.png" />
+                                <Image x:Name="PART_Image"
+                                       Width="{Binding Size, RelativeSource={RelativeSource TemplatedParent}}"
+                                       Height="{Binding Size, RelativeSource={RelativeSource TemplatedParent}}"
+                                       RenderOptions.BitmapScalingMode="Fant" />
+                                <Ellipse x:Name="PART_HCursor"
+                                         Width="12"
+                                         Height="12"
+                                         Stroke="White"
+                                         StrokeThickness="2" />
+                                <Ellipse x:Name="PART_SLCursor"
+                                         Width="12"
+                                         Height="12"
+                                         Stroke="White"
+                                         StrokeThickness="2" />
 
-                        </Canvas>
+                            </Canvas>
+                            <StackPanel VerticalAlignment="Center"
+                                        Orientation="Horizontal">
+                                <TextBlock Width="20"
+                                           Margin="10,0,0,0"
+                                           Foreground="white"
+                                           Text="H" />
+                                <Slider Width="150"
+                                        Margin="0,0,0,5"
+                                        Maximum="7"
+                                        Minimum="0"
+                                        Value="{Binding Hue, RelativeSource={RelativeSource TemplatedParent}}" />
+                            </StackPanel>
+                            <StackPanel VerticalAlignment="Center"
+                                        Orientation="Horizontal">
+                                <TextBlock Width="20"
+                                           Margin="10,0,0,0"
+                                           Foreground="white"
+                                           Text="S" />
+                                <Slider Width="150"
+                                        Margin="0,0,0,5"
+                                        Maximum="1"
+                                        Minimum="0"
+                                        Value="{Binding Saturation, RelativeSource={RelativeSource TemplatedParent}}" />
+                            </StackPanel>
+                            <StackPanel VerticalAlignment="Center"
+                                        Orientation="Horizontal">
+                                <TextBlock Width="20"
+                                           Margin="10,0,0,0"
+                                           Foreground="white"
+                                           Text="V" />
+                                <Slider Width="150"
+                                        Margin="0,0,0,5"
+                                        Maximum="1"
+                                        Minimum="0"
+                                        Value="{Binding Value, RelativeSource={RelativeSource TemplatedParent}}" />
+                            </StackPanel>
+                        </StackPanel>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>

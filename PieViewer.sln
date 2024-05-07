@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.5.33627.172
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PieViewer", "PieViewer\PieViewer.csproj", "{24E1661F-3A5F-41FF-AB9B-405ADBFF1C9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PieViewer", "PieViewer\PieViewer.csproj", "{24E1661F-3A5F-41FF-AB9B-405ADBFF1C9E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StyleApp", "StyleApp\StyleApp.csproj", "{721E374E-E120-409E-B1B1-015F0F3D3B4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkApp", "BenchmarkApp\BenchmarkApp.csproj", "{7A38BE74-8573-4990-9FAF-EC52D0DD07DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{6AC43D84-EA30-4866-8FD6-454930E919D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{24E1661F-3A5F-41FF-AB9B-405ADBFF1C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24E1661F-3A5F-41FF-AB9B-405ADBFF1C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24E1661F-3A5F-41FF-AB9B-405ADBFF1C9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{721E374E-E120-409E-B1B1-015F0F3D3B4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{721E374E-E120-409E-B1B1-015F0F3D3B4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{721E374E-E120-409E-B1B1-015F0F3D3B4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{721E374E-E120-409E-B1B1-015F0F3D3B4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A38BE74-8573-4990-9FAF-EC52D0DD07DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A38BE74-8573-4990-9FAF-EC52D0DD07DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A38BE74-8573-4990-9FAF-EC52D0DD07DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A38BE74-8573-4990-9FAF-EC52D0DD07DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AC43D84-EA30-4866-8FD6-454930E919D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AC43D84-EA30-4866-8FD6-454930E919D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AC43D84-EA30-4866-8FD6-454930E919D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AC43D84-EA30-4866-8FD6-454930E919D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
